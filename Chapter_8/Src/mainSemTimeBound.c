@@ -107,7 +107,7 @@ void TaskB( void* argument )
 	{
 		//'take' the semaphore with a 500mS timeout
 		SEGGER_SYSVIEW_PrintfHost("attempt to take semPtr");
-		if(xSemaphoreTake(semPtr, 500/portTICK_PERIOD_MS) == pdPASS)
+		if(xSemaphoreTake(semPtr, 250/portTICK_PERIOD_MS) == pdPASS)
 		{
 			RedLed.Off();
 			SEGGER_SYSVIEW_PrintfHost("received semPtr");
